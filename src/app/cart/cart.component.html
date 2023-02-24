@@ -9,5 +9,8 @@
     </div>
 </div>
 <div>
-    <p>Total:</p>
+    <p>Summe (incl. 10% service): {{getTotal()}} €</p>
+    <div *ngIf="getTotal()>40">
+        <p>New discounted price: {{getDiscountedPrice(getTotal())}}</p>
+    </div>
 </div>

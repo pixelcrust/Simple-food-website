@@ -14,9 +14,16 @@ export class CartComponent {
   }
   ngOnInit():void{
     this.cart = this.cartservice.getCart();
+  }
+
+  getTotal():number{
     let total = 0;
     for(let i = 0; i<this.cart.length; i++){
       total += this.cart[i].price;
     }
+    return total*1.1;
+  }
+  getDiscountedPrice(total:number):number{
+    return total *= 0.9;
   }
 }
