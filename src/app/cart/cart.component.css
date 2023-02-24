@@ -1,3 +1,6 @@
 img{
     image-rendering: pixelated;
 }
+#container{
+    min-height: 512px;
+}
