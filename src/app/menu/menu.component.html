@@ -1,1 +1,14 @@
-<p>menu works!</p>
+<div class="container">
+    <div class="row row-cols-lg-3">
+        <div *ngFor="let dish of dishes; index as id">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title">{{dish.name}}</h5>                
+                <img class="card-img-top" src="{{dish.img}}" alt="Card image cap">
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary" routerLink="/dish/{{id}}">Details</a>
+                        <a href="#" class="btn btn-primary">Order</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
