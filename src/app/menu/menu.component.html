@@ -9,9 +9,10 @@
                 <img class="card-img-top" src="{{dish.img}}" alt="Card image cap">
                     <div class="card-body">
                         <p>{{dish.price}} €</p>
-                        <p href="#" class="btn btn-primary" routerLink="/dish/{{id}}">Details</p>
+
                         <div *ngIf="dish.availability else elseBlock">
-                            <p href="#" class="btn btn-primary" (click)="addToCart(dish)">Order</p>
+                            <p href="#" class="btn btn-primary m-1" routerLink="/dish/{{id}}">Details</p>
+                            <p href="#" class="btn btn-primary m-1" (click)="addToCart(dish)">Order</p>
                         </div>
                         <ng-template #elseBlock><p>Currently not available</p></ng-template>
                     </div>
