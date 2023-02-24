@@ -8,9 +8,10 @@
         <h5 class="mt-0">{{dish.name}}</h5>
         <p>{{dish.description}}</p>
         <p>{{dish.price}} €</p>
-        <div>
-            <a href="#" class="btn btn-primary">Order</a>
+        <div *ngIf="dish.availability else elseBlock">
+            <p href="#" class="btn btn-primary" (click)="addToCart(dish)">Order</p>
         </div>
+        <ng-template #elseBlock>Currently not available</ng-template>
 
         </div>
     </div>

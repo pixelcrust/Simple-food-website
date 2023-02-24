@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
 import { menu_products, Idish } from '../menu';
 
 @Component({
@@ -8,4 +9,11 @@ import { menu_products, Idish } from '../menu';
 })
 export class MenuComponent {
   dishes: Array<Idish> = menu_products;
+  constructor(private cartservice: CartService){
+
+  }
+  addToCart(dish: Idish){
+    alert("Added");
+    this.cartservice.addToCart(dish);
+  }
 }

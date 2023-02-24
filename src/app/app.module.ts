@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { DetailsComponent } from './details/details.component';
-import { OrderComponent } from './order/order.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { OrderComponent } from './order/order.component';
     AboutComponent,
     MenuComponent,
     DetailsComponent,
-    OrderComponent
+    CartComponent
   ],
   imports: [
     BrowserModule,
