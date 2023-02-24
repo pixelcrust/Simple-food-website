@@ -1,16 +1,17 @@
-
-<div *ngFor="let dish of cart; index as id">
-    <div class="media">
-        <img class="mr-3" src="{{dish.img}}" alt="Generic placeholder image">
-        <div class="media-body">
-            <h5 class="mt-0">{{dish.name}}</h5>
-            <p>{{dish.price}} €</p>
+<div class="p-3">
+    <div *ngFor="let dish of cart; index as id">
+        <div class="media">
+            <img class="mr-3" src="{{dish.img}}" alt="Generic placeholder image">
+            <div class="media-body">
+                <h5 class="mt-0">{{dish.name}}</h5>
+                <p>{{dish.price}} €</p>
+            </div>
         </div>
     </div>
-</div>
-<div>
-    <p>Summe (incl. 10% service): {{getTotal()}} €</p>
-    <div *ngIf="getTotal()>40">
-        <p>New discounted price: {{getDiscountedPrice(getTotal())}}</p>
+    <div>
+        <p>Summe (incl. 10% service): {{getTotal()}} €</p>
+        <div *ngIf="getTotal()>40">
+            <p>New discounted price: {{getDiscountedPrice(getTotal())}}</p>
+        </div>
     </div>
 </div>
