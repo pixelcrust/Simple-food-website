@@ -1,10 +1,11 @@
 <div class="container p-3">
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <div *ngFor="let dish of dishes; index as id">
-            <div class="card  p-2 m-3" style="width: 18rem;">
+            <div class="card  p-2 m-3 bg-secondary" style="width: 18rem;">
                 <h5 class="card-title">{{dish.name}}</h5>                
                 <img class="card-img-top" src="{{dish.img}}" alt="Card image cap">
                     <div class="card-body">
+                        <p>{{dish.price}} €</p>
                         <p href="#" class="btn btn-primary" routerLink="/dish/{{id}}">Details</p>
                         <div *ngIf="dish.availability else elseBlock">
                             <p href="#" class="btn btn-primary" (click)="addToCart(dish)">Order</p>
