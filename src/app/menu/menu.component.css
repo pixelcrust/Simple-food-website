@@ -1,3 +1,3 @@
-img{
+img{    /* so the scaling of the small pictures stays pixelart */
     image-rendering: pixelated;
 }

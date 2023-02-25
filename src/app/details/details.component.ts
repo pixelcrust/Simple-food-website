@@ -21,7 +21,7 @@ export class DetailsComponent implements OnInit{
     })
   }
 
-  addToCart(dish: Idish){
+  addToCart(dish: Idish){ //add to cart
     alert("Added");
     this.cartservice.addToCart(dish);
   }

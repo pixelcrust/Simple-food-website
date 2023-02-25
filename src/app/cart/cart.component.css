@@ -1,6 +1,6 @@
-img{
+img{    /* so smaller pictures scale without interpolation */
     image-rendering: pixelated;
 }
-#container{
+#container{ /* according to viewport */
     min-height: 85vh;
 }

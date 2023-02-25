@@ -16,14 +16,14 @@ export class CartComponent {
     this.cart = this.cartservice.getCart();
   }
 
-  getTotal():number{
+  getTotal():number{  //go through the array and sum the price
     let total = 0;
     for(let i = 0; i<this.cart.length; i++){
       total += this.cart[i].price;
     }
-    return total*1.1;
+    return total*1.1; //return the summ with 10% service fee
   }
   getDiscountedPrice(total:number):number{
-    return total *= 0.9;
+    return total *= 0.85;  //do the discount
   }
 }
